@@ -3,7 +3,7 @@ import Social from "./Social";
 import backgroundVideo from "./background.mp4";
 import profileImage from "./image.jpeg";  // Update the file name accordingly
 import styles from "./Home.module.css";  // Import CSS module
-import Typical from 'react-typical';
+import { TypeAnimation } from 'react-type-animation';
 
 const Home = () => {
   const videoRef = useRef(null);
@@ -36,11 +36,16 @@ const Home = () => {
           <img src={profileImage} alt="Johnson Clever" className={styles.profilePic} />
           <div className={styles.details}>
             <h3 className={styles.name}>
-            <Typical
-              steps={['J', 800, 'Jo', 800, 'Joh', 800, 'John', 800, 'Johns', 800, 'Johnso', 800, 'Johnson', 800, 'Johnson ', 800, 'Johnson C', 800, 'Johnson Cl', 800, 'Johnson Cle', 800, 'Johnson Clev', 800, 'Johnson Cleve', 800, 'Johnson Clever', 1000]}
-              loop={1}
-              wrapper="span"
-            />
+              <TypeAnimation
+                sequence={[
+                  'Johnson', 
+                  800, 
+                  'Johnson Clever', 
+                  800,
+                ]}
+                speed={50}
+                repeat={Infinity}
+              />
             </h3>
             <p 
               className={styles.job} 
