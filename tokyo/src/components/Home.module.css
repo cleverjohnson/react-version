@@ -11,7 +11,7 @@
 
 .profilePic {
   width: 220px;
-  height: 220px;
+  height: 221px;
   border-radius: 50%;
   object-fit: cover;
   opacity: 0; /* Start hidden */
