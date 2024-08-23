@@ -42,7 +42,14 @@ const Home = () => {
               wrapper="span"
             />
             </h3>
-            <p className={styles.job}>
+            <p 
+              className={styles.job} 
+              style={{ 
+                fontFamily: "'Roboto', 'Lato', 'Source Sans Pro', 'Open Sans', 'IBM Plex Sans', sans-serif", 
+                fontSize: "14px", 
+                lineHeight: "1.6", 
+                color: "#fff" 
+              }}>
               A dedicated full-stack web developer with a keen interest in healthcare technology. By day, I enhance digital experiences at an advertising agency, where I specialize in adding custom PHP code to WordPress sites through FTP. In my personal projects, I leverage my background in medical informatics to develop innovative solutions, such as a comprehensive diabetes management system. My work integrates cutting-edge technologies like FHIR, PostgreSQL, React, and Flask, aiming to transform healthcare through the power of data and modern web development.
             </p>
             <Social />
