@@ -1,3 +1,24 @@
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100vw) translateY(20px); /* Start from outside the right edge of the viewport and slightly down */
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) translateY(0); /* End at its original position */
+    opacity: 1;
+  }
+}
+
+.profilePic {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  opacity: 0; /* Start hidden */
+  animation: slideInFromRight 2.5s ease-out forwards; /* Slide in animation over 2.5 seconds */
+  animation-delay: 0.5s; /* Optional: Add a delay if you want it to start after other animations */
+}
+
 .tokyo_tm_home {
   position: relative;
   height: 100vh;
@@ -11,14 +32,12 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  z-index: -2;
+  z-index: -3;
 }
 
 .video {
-  min-width: 100%;
-  min-height: 100%;
   width: auto;
-  height: auto;
+  height: 100vh;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -49,12 +68,26 @@
   height: 100vh;
 }
 
-.profilePic {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  object-fit: cover;
-  animation: fadeInUp 1s ease-out;
+.name {
+  font-family: "Courier New", Courier, monospace;
+  overflow: hidden;
+  border-right: 0.15em solid black;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation:
+    typing 3.5s steps(30, end),
+    blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  from, to { border-color: transparent; }
+  50% { border-color: black; }
 }
 
 @keyframes fadeInUp {

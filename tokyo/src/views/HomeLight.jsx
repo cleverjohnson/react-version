@@ -25,7 +25,7 @@ const HomeLight = () => {
 
   return (
     <>
-      <PageTitle title="Home|Johnson" />
+      <PageTitle title="Home" />
       {/* End page title for seo */}
 
       <button className="theme-switcher-label" onClick={toggleDarkMode}>
