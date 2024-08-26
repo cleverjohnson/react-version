@@ -11,7 +11,7 @@ const Home = () => {
   useEffect(() => {
     // Set playback rate when the component mounts
     if (videoRef.current) {
-      videoRef.current.playbackRate = 0.2; // Adjust playback speed (e.g., 0.5 for half speed)
+      videoRef.current.playbackRate = 0.25; // Adjust playback speed (e.g., 0.5 for half speed)
     }
   }, []);
 
