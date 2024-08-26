@@ -43,7 +43,7 @@ const Home = () => {
                   'Johnson Clever', 
                   800,
                 ]}
-                speed={50}
+                speed={30}
                 repeat={Infinity}
               />
             </h3>
