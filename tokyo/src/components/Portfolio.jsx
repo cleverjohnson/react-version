@@ -95,7 +95,7 @@ const Portfolio = () => {
                       <SRLWrapper>
                         <li
                           data-aos="fade-right"
-                          data-aos-duration="1200"
+                          data-aos-duration="1200" 
                           data-aos-delay="200"
                         >
                           <div className="inner">
