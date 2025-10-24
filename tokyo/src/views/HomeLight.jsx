@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import Home from "../components/Home";
 import About from "../components/about/AboutMain";
 import Portfolio from "../components/PortfolioCreative";
-import News from "../components/News";
 import ServiceMain from "../components/service/ServiceMain";
 import Contact from "../components/Contact";
 import CopyRight from "../components/CopyRight";
@@ -89,14 +88,6 @@ const HomeLight = () => {
                   <Tab>
                     <img
                       className="svg"
-                      src="/assets/img/svg/paper.svg"
-                      alt="paper"
-                    />
-                    <span className="menu_content">News</span>
-                  </Tab>
-                  <Tab>
-                    <img
-                      className="svg"
                       src="/assets/img/svg/mail.svg"
                       alt="mail"
                     />
@@ -151,11 +142,6 @@ const HomeLight = () => {
                 <Portfolio />
               </TabPanel>
               {/* END PORTFOLIO MENU TAB CONTENT */}
-
-              <TabPanel>
-                <News />
-              </TabPanel>
-              {/* END NEWS MENU TAB CONTENT */}
 
               <TabPanel>
                 <div

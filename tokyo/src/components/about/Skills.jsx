@@ -5,22 +5,32 @@ const Skills = () => {
     {
       id: 1,
       colClass: "left",
-      title: "Programming Skills",
+      title: "Technical Skills",
       progress: [
         {
           id: 1,
-          skillName: "WordPress",
+          skillName: "Python (Pandas, Scikit-learn, Flask)",
           skillValue: "90",
         },
         {
           id: 2,
-          skillName: "JavaScript",
-          skillValue: "75",
+          skillName: "JavaScript (React, Node.js)",
+          skillValue: "80",
         },
         {
           id: 3,
-          skillName: "Django",
-          skillValue: "50",
+          skillName: "Docker & PostgreSQL",
+          skillValue: "75",
+        },
+        {
+          id: 4,
+          skillName: "FHIR R4 & Health Data Standards",
+          skillValue: "70",
+        },
+        {
+          id: 5,
+          skillName: "Machine Learning & Data Analysis",
+          skillValue: "80",
         },
       ],
     },
@@ -32,12 +42,12 @@ const Skills = () => {
         {
           id: 1,
           skillName: "English",
-          skillValue: "90",
+          skillValue: "100",
         },
         {
           id: 2,
           skillName: "German",
-          skillValue: "50",
+          skillValue: "55",
         },
         {
           id: 3,
@@ -47,6 +57,7 @@ const Skills = () => {
       ],
     },
   ];
+
   return (
     <>
       {skillsContent.map((item) => (
@@ -59,7 +70,7 @@ const Skills = () => {
             {item?.progress?.map((skill) => (
               <div
                 className="progress_inner"
-                data-value={item.skillValue}
+                data-value={skill.skillValue}
                 key={skill.id}
               >
                 <span>

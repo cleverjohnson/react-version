@@ -2,7 +2,6 @@ import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Map from "./Map";
 
 const Contact = () => {
   const form = useRef();
@@ -50,16 +49,12 @@ const Contact = () => {
           <div className="tokyo_tm_title">
             <div className="title_flex">
               <div className="left">
-                <span>Contact</span>
-                <h3>Get in Touch</h3>
+                <span>Get in Touch</span>
               </div>
             </div>
           </div>
           {/* END TITLE */}
 
-          <div style={{ marginBottom: "40px" }}>
-            <Map />
-          </div>
           {/* MENU WRAP */}
 
           <div className="fields">

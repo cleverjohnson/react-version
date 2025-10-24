@@ -38,24 +38,24 @@ const Home = () => {
             <h3 className={styles.name}>
               <TypeAnimation
                 sequence={[
-                  'Johnson', 
-                  800, 
-                  'Johnson Clever', 
-                  800,
+                  "Data Scientist", 2000,
+                  "AI Systems", 2000,
+                  "Health Innovator", 2000,
                 ]}
                 speed={30}
                 repeat={Infinity}
               />
             </h3>
-            <p 
-              className={styles.job} 
-              style={{ 
-                fontFamily: "'Roboto', 'Lato', 'Source Sans Pro', 'Open Sans', 'IBM Plex Sans', sans-serif", 
-                fontSize: "14px", 
-                lineHeight: "1.6", 
-                color: "#fff" 
-              }}>
-              A dedicated full-stack web developer with a keen interest in healthcare technology. By day, I enhance digital experiences at an advertising agency, where I specialize in adding custom PHP code to WordPress sites through FTP. In my personal projects, I leverage my background in medical informatics to develop innovative solutions, such as a comprehensive diabetes management system. My work integrates cutting-edge technologies like FHIR, PostgreSQL, React, and Flask, aiming to transform healthcare through the power of data and modern web development.
+            <p
+              className={styles.job}
+              style={{
+                fontFamily: "'Roboto', 'Lato', 'Source Sans Pro', 'Open Sans', 'IBM Plex Sans', sans-serif",
+                fontSize: "14px",
+                lineHeight: "1.6",
+                color: "#fff",
+              }}
+            >
+              Computational health data scientist and full-stack developer with a focus on building intelligent, data-driven healthcare systems. My work combines health informatics, software engineering, and AI to create interoperable EHR platforms such as ChronoViva for diabetes management. Leveraging technologies like FHIR, PostgreSQL, React, and Flask, I develop scalable, secure, and research-ready health data solutions that drive better clinical outcomes and global digital health innovation.
             </p>
             <Social />
           </div>

@@ -1,6 +1,5 @@
 import React from "react";
 import Modal from "react-modal";
-import Testimonial from "./Testimonial";
 import Intro from "./Intro";
 import KnowledgeInterest from "./KnowledgeInterest";
 import PersonalInfo from "./PersonalInfo";
@@ -18,7 +17,6 @@ const AboutMain = () => {
             <div className="title_flex">
               <div className="left">
                 <span>About</span>
-                <h3>About Me</h3>
               </div>
             </div>
           </div>
@@ -67,19 +65,6 @@ const AboutMain = () => {
         </div>
       </div>
       {/* End tokyo_tm_resumebox */}
-
-      <div className="tokyo_tm_testimonials">
-        <div className="container">
-          <div className="tokyo_section_title">
-            <h3>Testimonials</h3>
-          </div>
-          <div className="list">
-            <Testimonial />
-          </div>
-        </div>
-      </div>
-      {/* End tokyo_tm_testimonials */}
-
       {/* /ABOUT */}
     </>
   );

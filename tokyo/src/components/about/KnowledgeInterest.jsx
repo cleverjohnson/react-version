@@ -7,11 +7,11 @@ const KnowledgeInterest = () => {
       colClass: "left",
       title: "Knowledge",
       content: [
-        " Bootstrap, CSS, HTML",
-        " React, Angular, Django",
-        " Stylus, Sass, Less",
-        " Python, Numpy, Pandas",
-        " Wordpress, Figma, Canva",
+        " Python (Pandas, Scikit-learn, Flask, FastAPI)",
+        " JavaScript (React, Node.js)",
+        " Docker, PostgreSQL, Git",
+        " FHIR R4, ICD-11, Health Data Standards",
+        " Machine Learning & Data Visualization",
       ],
     },
     {
@@ -19,11 +19,11 @@ const KnowledgeInterest = () => {
       colClass: "right",
       title: "Interests",
       content: [
-        " Develop Software",
-        " Create Web App",
-        " Site Optimization",
-        " Custom Website",
-         "Learn Machine Learning",
+        " Building AI-driven Health Systems",
+        " Developing Data Pipelines",
+        " Clinical Decision Support Research",
+        " Web App Development & Optimization",
+        " Exploring Digital Health Innovation",
       ],
     },
   ];

@@ -14,12 +14,12 @@ const PersonalInfo = () => {
         {
           id: 2,
           name: "Age",
-          content: "25",
+          content: "27",
         },
         {
           id: 3,
           name: "Address",
-          content: "Woching-3, 84347 Pfarrkirchen|DE",
+          content: "Rottstrasse 25, 84364 Bad Birnbach|DE",
         },
         {
           id: 4,
@@ -35,7 +35,7 @@ const PersonalInfo = () => {
           name: "Phone",
           content: (
             <>
-              <a href="tel:+4917670339367">+4917670339367</a>
+              <a href="tel:+4917670339367">+491788413927</a>
             </>
           ),
         },
@@ -53,22 +53,22 @@ const PersonalInfo = () => {
         {
           id: 2,
           name: "Study",
-          content: "Deggendorf University of Technology",
+          content: "Heriot-Watt University, United Kingdom",
         },
         {
           id: 3,
           name: "Degree",
-          content: "Bachelor",
+          content: "MSc Computer Science",
         },
         {
           id: 4,
           name: "Interest",
-          content: "<Writing_Code />",
+          content: "Data-Driven Systems & AI",
         },
         {
           id: 5,
           name: "Passion",
-          content: "Digital-Health",
+          content: "Digital Health Innovation",
         },
       ],
     },

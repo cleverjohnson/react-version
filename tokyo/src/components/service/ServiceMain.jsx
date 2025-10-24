@@ -1,5 +1,4 @@
 import React from "react";
-import FunFact from "./FunFact";
 import Services from "./Services";
 
 const ServiceMain = () => {
@@ -13,7 +12,6 @@ const ServiceMain = () => {
             <div className="title_flex">
               <div className="left">
                 <span>Services</span>
-                <h3>What I Do</h3>
               </div>
             </div>
           </div>
@@ -29,18 +27,6 @@ const ServiceMain = () => {
       </div>
       {/* End .container */}
 
-      <div className="tokyo_tm_facts">
-        <div className="container">
-          <div className="tokyo_section_title">
-            <h3>Fun Facts</h3>
-          </div>
-          <div className="list">
-            <ul>
-              <FunFact />
-            </ul>
-          </div>
-        </div>
-      </div>
       {/* End funfacts */}
 
       {/* /SERVICE */}

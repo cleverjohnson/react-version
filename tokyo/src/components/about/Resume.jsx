@@ -9,21 +9,27 @@ const Resume = () => {
       resume: [
         {
           id: 1,
-          year: "2021 - Current",
-          institute: "Deggedorf University of Technology",
-          degree: "Bachelor of Health Informatics",
+          year: "2025 - Present",
+          institute: "Heriot-Watt University, United Kingdom",
+          degree: "MSc Computer Science (Data Systems, AI & Machine Learning)",
         },
         {
           id: 2,
-          year: "2017 - 2020",
-          institute: "Makerere University",
-          degree: "Bachelor of science in Education Biological",
+          year: "2021 - 2025",
+          institute: "Technische Hochschule Deggendorf, Germany",
+          degree: "Bachelor of Health Informatics (Undergraduate Studies)",
         },
         {
           id: 3,
+          year: "2017 - 2019",
+          institute: "Makerere University, Uganda",
+          degree: "Bachelor of Science in Education (Biological)",
+        },
+        {
+          id: 4,
           year: "2015 - 2016",
-          institute: "Our Lady of Gayaza",
-          degree: "Uganda Advanced Certificate of Education",
+          institute: "Our Lady of Good Counsel – Gayaza, Uganda",
+          degree: "Uganda Advanced Certificate of Education (Health Sciences)",
         },
       ],
     },
@@ -35,24 +41,31 @@ const Resume = () => {
         {
           id: 1,
           year: "2023 - Current",
-          institute: "Artwerb GmbH",
-          degree: "Web Developer",
+          institute: "Atwerb GmbH, Germany",
+          degree: "Full-Stack Developer",
         },
         {
           id: 2,
-          year: "2014 - 2021",
-          institute: "Nextel System Limited",
-          degree: "Web Designer",
+          year: "2017 - 2021",
+          institute: "Nextel Systems Limited, Uganda",
+          degree: "Software Developer",
         },
         {
           id: 3,
-          year: "2016 - 2021",
-          institute: "Mukusu Motors Limited",
-          degree: "Website Manager",
+          year: "2018 - 2021",
+          institute: "Mukusu Motors & Properties Ltd, Uganda",
+          degree: "Website Administrator",
+        },
+        {
+          id: 4,
+          year: "2021 - 2023",
+          institute: "Various Companies – Germany (Develey, Plantura, Sendmoments, Zenjob)",
+          degree: "Technical & Logistics",
         },
       ],
     },
   ];
+
   return (
     <>
       {resumeContent.map((item) => (
