@@ -9,8 +9,6 @@ Modal.setAppElement("#root");
 
 const Portfolio = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [currentIndex, setCurrentIndex] = useState(0);
-
   const coverImage = "assets/img/diabetesmanagementehr.png";
   const images = [
     "assets/img/EditEncounter.png",
@@ -22,11 +20,6 @@ const Portfolio = () => {
   ];
 
   const toggleModal = () => setIsOpen(!isOpen);
-
-  const prevImage = () =>
-    setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-  const nextImage = () =>
-    setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
 
   return (
     <>
@@ -53,6 +46,43 @@ const Portfolio = () => {
             </p>
           </div>
 
+          {/* Cover image with overlay CTA */}
+          <div className="relative flex justify-center mt-8 mb-12">
+            <img
+              src={coverImage}
+              alt="ChronoViVa Cover"
+              className="rounded-xl shadow-lg transition-transform duration-300 hover:scale-105 object-contain"
+              style={{ maxWidth: "350px", width: "70%", height: "auto"}}
+            />
+
+            {/* Overlay that triggers modal */}
+            <button
+              onClick={toggleModal}
+              className="absolute inset-0 flex items-center justify-center 
+                         bg-black bg-opacity-40 opacity-0 hover:opacity-100 
+                         transition-opacity rounded-xl cursor-pointer"
+            >
+              <span className="flex items-center gap-2 text-white text-lg font-semibold tracking-wide">
+                {/* Small launch arrow icon */}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 10l4.553-4.553a1 1 0 011.414 1.414L16.414 11.5H21a1 1 0 010 2h-6a1 1 0 01-1-1V7a1 1 0 112 0v3.086z"
+                  />
+                </svg>
+                Explore Project
+              </span>
+            </button>
+          </div>
+          
           {/* Links */}
           <div className="project_links mt-6 flex flex-wrap justify-center space-x-4">
             <div className="tokyo_tm_button">
@@ -64,52 +94,8 @@ const Portfolio = () => {
                 <span>View on GitLab</span>
               </a>
             </div>
-            <div className="tokyo_tm_button">
-              <a
-                href="assets/pdf/ChronoViVa_Diabetes_Management_EHR_Concept.pdf"
-                download
-              >
-                <span>Download Concept Paper</span>
-              </a>
-            </div>
-            <div className="tokyo_tm_button">
-              <button onClick={toggleModal}>
-                <span>Learn More</span>
-              </button>
-            </div>
           </div>
 
-          {/* Cover image */}
-          <div className="w-full mt-8 mb-12 flex justify-center">
-            <img
-              src={coverImage}
-              alt="ChronoViVa Cover"
-              className="w-1/3 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300"
-            />
-          </div>
-
-          {/* Manual image slider */}
-          <div className="relative w-full max-w-4xl mx-auto mb-8">
-            <img
-              src={images[currentIndex]}
-              alt={`ChronoViVa view ${currentIndex + 1}`}
-              className="w-full rounded-lg shadow-lg object-contain"
-            />
-            {/* Left arrow */}
-            <button
-              onClick={prevImage}
-              className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 hover:bg-opacity-80 text-white p-2 rounded-full"
-            >
-              &#8592;
-            </button>
-            {/* Right arrow */}
-            <button
-              onClick={nextImage}
-              className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 hover:bg-opacity-80 text-white p-2 rounded-full"
-            >
-              &#8594;
-            </button>
-          </div>
         </div>
       </div>
 
@@ -118,33 +104,43 @@ const Portfolio = () => {
         isOpen={isOpen}
         onRequestClose={toggleModal}
         contentLabel="Project Details"
-        className="mymodal"
-        overlayClassName="myoverlay"
-        closeTimeoutMS={500}
+        className="mymodal max-w-6xl mx-auto bg-white rounded-2xl shadow-xl p-6 outline-none overflow-y-auto max-h-[90vh]"
+        overlayClassName="myoverlay fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center z-50"
+        closeTimeoutMS={300}
       >
-        <div className="tokyo_tm_modalbox_news portfolio_tm_modalbox">
-          <button className="close-modal" onClick={toggleModal}>
-            <img src="assets/img/svg/cancel.svg" alt="close icon" />
+        <div className="tokyo_tm_modalbox_news portfolio_tm_modalbox relative">
+          {/* Close button */}
+          <button
+            className="absolute top-4 right-4 bg-gray-100 hover:bg-gray-200 p-2 rounded-full transition"
+            onClick={toggleModal}
+          >
+            <img src="assets/img/svg/cancel.svg" alt="close icon" className="w-4 h-4" />
           </button>
+
+          {/* Content */}
           <div className="box_inner">
-            <div className="description_wrap scrollable">
-              <div className="image mb-8">
+            <div className="description_wrap">
+              {/* Project overview */}
+              <div className="mb-6">
                 <img
                   src={coverImage}
                   alt="ChronoViVa Overview"
                   className="w-full rounded-lg shadow-lg"
                 />
               </div>
-              <div className="portfolio_main_title mb-6">
+
+              <div className="portfolio_main_title mb-6 text-center">
                 <h3 className="text-2xl font-bold">
                   ChronoViVa – Diabetes Management EHR System
                 </h3>
                 <span className="text-lg text-gray-600">Project Details</span>
               </div>
-              <div className="main_details text-gray-700">
+
+              <div className="main_details text-gray-700 mb-8">
                 <p className="mb-4">
                   ChronoViVa integrates multiple health data streams to improve diabetes care through
-                  FHIR-based interoperability, ICD-11 coding, and predictive analytics.
+                  FHIR-based interoperability, ICD-11 coding, and predictive analytics. The system
+                  supports patient encounters, observations, and smart dashboards built in React and Flask.
                 </p>
                 <ul className="space-y-2">
                   <li>
@@ -160,6 +156,19 @@ const Portfolio = () => {
                     <span className="font-semibold">Share:</span> <Social />
                   </li>
                 </ul>
+              </div>
+
+              {/* All screenshots shown at once */}
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                {images.map((src, index) => (
+                  <div key={index} className="w-full">
+                    <img
+                      src={src}
+                      alt={`ChronoViVa Screenshot ${index + 1}`}
+                      className="rounded-lg shadow-md hover:shadow-xl transition-transform transform hover:scale-105 cursor-pointer"
+                    />
+                  </div>
+                ))}
               </div>
             </div>
           </div>

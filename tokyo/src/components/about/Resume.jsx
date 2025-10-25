@@ -40,7 +40,7 @@ const Resume = () => {
       resume: [
         {
           id: 1,
-          year: "2023 - Current",
+          year: "2023 - 2025",
           institute: "Atwerb GmbH, Germany",
           degree: "Full-Stack Developer",
         },
