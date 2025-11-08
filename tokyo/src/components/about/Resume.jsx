@@ -40,30 +40,36 @@ const Resume = () => {
       resume: [
         {
           id: 1,
+          year: "Nov 2025 - Feb 2026",
+          institute: "Malengo gGmbH, Berlin",
+          degree: "Product & Data Support / Student Services",
+        },
+        {
+          id: 2,
           year: "2023 - 2025",
           institute: "Atwerb GmbH, Germany",
           degree: "Full-Stack Developer",
         },
         {
-          id: 2,
+          id: 3,
           year: "2017 - 2021",
           institute: "Nextel Systems Limited, Uganda",
           degree: "Software Developer",
         },
         {
-          id: 3,
+          id: 4,
           year: "2018 - 2021",
           institute: "Mukusu Motors & Properties Ltd, Uganda",
           degree: "Website Administrator",
         },
         {
-          id: 4,
+          id: 5,
           year: "2021 - 2023",
           institute: "Various Companies – Germany (Develey, Plantura, Sendmoments, Zenjob)",
           degree: "Technical & Logistics",
         },
       ],
-    },
+    }
   ];
 
   return (
